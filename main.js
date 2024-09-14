@@ -1,3 +1,4 @@
+//integer to binary
 function intBinary(int)  {
     let binary = []
     let quotient = int;
@@ -11,3 +12,19 @@ function intBinary(int)  {
 }
 
 console.log(intBinary(10)); // [1,0,1,0]
+
+
+//binary to integer
+
+function binaryInt(arr) { 
+    let decimal = 0
+
+    for(let i = 0; i < arr.length; i++) { 
+        let bit = arr[i]
+        let power = arr.length - i - 1;
+        decimal += bit * Math.pow(2,power);
+    }
+    return decimal;
+}
+
+console.log(binaryInt([1, 1, 0, 1]));
